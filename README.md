@@ -1,7 +1,7 @@
 #### Тестовое задание на позицию UnityDeveloper
 
 ### **Реализация:** 
-[Короткое видео](https://youtu.be/swUzexl0-Ac)
+[Короткое видео](https://youtu.be/aq1hMCqLWdE)
 
 + **1. Подготовка к игре:**
 
