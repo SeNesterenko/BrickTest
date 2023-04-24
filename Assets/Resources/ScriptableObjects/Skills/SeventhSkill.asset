@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45ac308ea775b1c42b94528e5af66dfb, type: 3}
+  m_Name: SeventhSkill
+  m_EditorClassIdentifier: 
+  _nextSkills: []
+  _previousSkills:
+  - {fileID: 11400000, guid: 77da7454f0c643a44a0531f1582ccfb9, type: 2}
+  - {fileID: 11400000, guid: 3081aa8a016f2a34a9cf8dc44c61311c, type: 2}
+  _cost: 1
+  _name: 7
+  _position: {x: -523, y: -318}
