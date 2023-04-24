@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using Models;
 using UI.ViewControllers;
 using UnityEngine;

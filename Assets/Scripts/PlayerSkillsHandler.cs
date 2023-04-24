@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using Events;
 using Models;
@@ -79,44 +78,18 @@ public class PlayerSkillsHandler : IDisposable
 
     private bool CheckForgetSkill(SkillModel currentSkill)
     {
-        var canForgetSkill = true;
-
-        if (!_playerModel.Skills.Contains(currentSkill))
-        {
-            return false;
-        }
-        
-        foreach (var nextSkill in currentSkill.NextSkills)
-        {
-            if (_playerModel.Skills.Contains(nextSkill))
-            {
-                canForgetSkill = false;
-                break;
-            }
-        }
-
-        return canForgetSkill;
+        return _playerModel.Skills
+            .Contains(currentSkill) && currentSkill.NextSkills
+            .All(nextSkill => !_playerModel.Skills
+            .Contains(nextSkill));
     }
 
     private bool CheckStudySkill(SkillModel currentSkill)
     {
-        var canStudySkill = false;
-
-        if (_playerModel.Skills.Contains(currentSkill))
-        {
-            return false;
-        }
-        
-        foreach (var previousSkill in currentSkill.PreviousSkills)
-        {
-            if (_playerModel.Skills.Contains(previousSkill))
-            {
-                canStudySkill = true;
-                break;
-            }
-        }
-
-        return canStudySkill;
+        return !_playerModel.Skills
+            .Contains(currentSkill) && currentSkill.PreviousSkills
+            .Any(previousSkill => _playerModel.Skills
+            .Contains(previousSkill));
     }
 
     public void Dispose()

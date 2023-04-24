@@ -37,7 +37,7 @@ namespace UI.ViewControllers
         {
             if (!_skillModel.IsSelected)
             {
-                _skillView.Display(_skillModel.Name, _skillModel.IsStudied ? _studiedSkillColor : _notStudiedColor );
+                _skillView.Display(_skillModel.Name, _skillModel.IsStudied ? _studiedSkillColor : _notStudiedColor);
             }
             else
             {
